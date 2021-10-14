@@ -9,12 +9,7 @@
 
 cadena = input("introduce una cadena mayor que 7")
 numero=len(cadena)
-cad=cadena[(len(cadena)/2):]
+cad=cadena[int((len(cadena)/2))-1:int((len(cadena)/2))+2]
+print(cad)
 
-
-
-
-if len(cadena) >= 7 and numero%2==0:
-    print(cad)
-else:print("nah par")
     
