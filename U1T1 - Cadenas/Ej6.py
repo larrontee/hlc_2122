@@ -4,8 +4,9 @@
 # carácter de s1 y el segundo último carácter de s2, y así sucesivamente. Los caracteres sobrantes van al final del resultado.
 # Dado:
 s1 = "Abc"
-s2 = "Xyzjdk"
+s2 = "Xyz"
 # Resultado esperado:
+# AzbycX
 # AzbycX
 s3=s2[::-1]
 
