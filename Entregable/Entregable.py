@@ -20,7 +20,6 @@ def titulo_original(t):
     titulo = titulo.split("<")
     titulo = titulo[0]
     return titulo
-print("Título original:" + titulo_original(t))
 
 def anio(t):
     etiqueta_anio = "<dt>Año</dt>"
@@ -29,7 +28,7 @@ def anio(t):
     anio = anio[: anio.find("</dd>")].splitlines()[1].lstrip().rstrip()
     anio = anio[anio.find(">") + 1 :]
     return anio
-print("Año: " + anio(t))
+
 
 def daraçao(t):
     etiqueta_duracion = "<dt>Duración</dt>"
@@ -38,7 +37,7 @@ def daraçao(t):
     duracion = duracion[: duracion.find("</dd>")].splitlines()[1].lstrip().rstrip()
     duracion = duracion[duracion.find(">") + 1 :]
     return duracion
-print("Duracion: " + daraçao(t))
+
 
 def pais(t):
     etiqueta_pais = "<dt>País</dt>"
@@ -50,7 +49,6 @@ def pais(t):
     pais = pais.split(";")
     pais = pais[int(len(pais) - 1)]
     return pais
-print("Pais: " + pais(t))
 
 def direccion(t):
     etiqueta_direccion = "<dt>Dirección</dt>"
@@ -69,7 +67,6 @@ def direccion(t):
         if aux[i][0]!="/":
             aux1+=aux[i]
     return aux1
-print("Dirección: "+ direccion(t))
 
 def guion(t):
     etiqueta_guion = "<dt>Guion</dt>"
@@ -87,7 +84,6 @@ def guion(t):
 
         a+=1 
     return guionistas
-print("Guion: "+guion(t))
 
 
 def musica(t):
@@ -107,7 +103,7 @@ def musica(t):
     return guionistas
 
 
-print("Música: "+musica(t))
+
 def fotografia(t):
     etiqueta_guion = "<dt>Fotografía</dt>"
     pos_etiqueta_guion = t.find(etiqueta_guion)
@@ -123,7 +119,6 @@ def fotografia(t):
             guionistas += " , " + guion[:guion.find("</span>")] 
         a+=1 
     return guionistas
-print("Fotografia: "+fotografia(t))
 
 def productora(t):
     etiqueta_guion = "<dt>Productora</dt>"
@@ -140,7 +135,6 @@ def productora(t):
             guionistas += " , " + guion[:guion.find("</span>")] 
         a+=1 
     return guionistas
-print("Productora: "+productora(t))
 
 def reparto(t):
     etiqueta_reparto = "<dt>Reparto</dt>"
@@ -159,7 +153,6 @@ def reparto(t):
             a+=1 
     return all_cast
 
-print("Reparto: "+reparto(t))
 
 
 def grupo(t):
@@ -183,7 +176,6 @@ def grupo(t):
         guionistas=guionistas[0]
         return guionistas
     return "No hay grupo"
-print("Grupo: "+grupo(t))
 
 def sinopsis(t):
     etiqueta_sinopsis = "<dt>Sinopsis</dt>"
@@ -196,4 +188,19 @@ def sinopsis(t):
     descripcion=descripcion[0]
 
     return descripcion
-print("Título original:" + sinopsis(t))
+
+datos={
+"Título original": titulo_original(t),
+"Año":+ anio(t),
+"Pais":+ pais(t),
+"Fotografia":fotografia(t),
+"Duracion":+ daraçao(t),
+"Grupo":grupo(t),
+"Reparto":reparto(t),
+"Productora":productora(t),
+"Música":musica(t),
+"Guion":guion(t),
+"Dirección": direccion(t),
+"Sinopsis":+ sinopsis(t)
+}
+print(datos)
