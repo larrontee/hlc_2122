@@ -19,13 +19,19 @@ diccionario = {
     "planeta": "Namek"
 }
 
+# Esto es un iterador logico que copia el diccionario y lo convierte en array 
 dic=[(k,v) for (k,v) in diccionario.items()]
-aux={}
+print(dic)
+# con esto ahora puedes recorrerlo con un for e ir mirando en cada posicion si es la clave que quieres
 
-# for i in range(0, len(dic)): 
-#     for j in range(0, len(dic[0])):
-#         if(dic[i][j]=="nombre" or dic[i][j]=="salario"):
-#             aux[dic[i][0]]=dic[i][1]
+
+
+
+aux={}
+for i in range(0, len(dic)): 
+    for j in range(0, len(dic[0])):
+        if(dic[i][j]=="nombre" or dic[i][j]=="salario"):
+            aux[dic[i][0]]=dic[i][1]
 
 # diccionario=[(k,diccionario[k]) for (k) in keysToRemove]
 # print(diccionario)
