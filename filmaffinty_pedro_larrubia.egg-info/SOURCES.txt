@@ -1,0 +1,8 @@
+README.md
+setup.py
+filmaffinty_pedro_larrubia/__init__.py
+filmaffinty_pedro_larrubia/entregable_2.py
+filmaffinty_pedro_larrubia.egg-info/PKG-INFO
+filmaffinty_pedro_larrubia.egg-info/SOURCES.txt
+filmaffinty_pedro_larrubia.egg-info/dependency_links.txt
+filmaffinty_pedro_larrubia.egg-info/top_level.txt

@@ -2,16 +2,18 @@ import requests
 
 
 class filmaffinity:
+    resultado = {}
+    html = ""
+    url=""
     def __init__(self, url):
-        self.__resultado = {}
         self.__url = url
-        self.__html = ""
 
     def set_url(url):
         self.__url = url
 
     def do_request():
-        self.__html = requests.get(url)
+        enlace=requests.get(self.url)
+        self.__html = enlace.text
 
     def __titulo_original(t):
         etiqueta_titulo = "<dt>Título original</dt>"
@@ -184,7 +186,6 @@ class filmaffinity:
         return descripcion
 
     def __procesar(self):
-
         self.__resultado = {
             "Titulo": self.__titulo_original(self.__html),
             "Año": self.__anio(self.__html),
@@ -192,11 +193,12 @@ class filmaffinity:
             "Pais": self.__pais(self.__html),
             "Direccion": self.__direccion(self.__html),
             "Guion": self.__guion(self.__html),
+            "Musica":self.__musica(self.__html),
+            "Fotografia":self.__fotografia(self.__html),
+            "Productora":self.__productora(self.__html),
+            "Reparto":self.__reparto(self.__html),
+            "Grupo":self.__grupo(self.__html),
+            "Sipnosis":self.__sinopsis(self.__html)
         }
-
-        self.__musica(self.__html)
-        self.__fotografia(self.__html)
-        self.__productora(self.__html)
-        self.__reparto(self.__html)
-        self.__grupo(self.__html)
-        self.__sinopsis(self.__html)
+    def get_result(self):
+        return self.__resultado
