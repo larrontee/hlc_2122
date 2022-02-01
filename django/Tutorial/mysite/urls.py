@@ -1,3 +1,4 @@
+from blog.views import curso_django, curso_python
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
     path('adios/', despedida),
+    path('curso_django/', curso_django),
+    path('curso_python/', curso_python),
 ]
