@@ -1,9 +1,5 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-# Create your models here.
-
 
 class Clientes(models.Model):
     nombre: nombre = models.CharField(max_length=50)
@@ -12,7 +8,7 @@ class Clientes(models.Model):
     telefono: telefono = models.CharField(max_length=50)
 
     def __str__(self):
-        return "nombre" + self.nombre + "direccion " + self.direccion + "email"+self.email + "telefono"+self.telefono
+        return 'Cliente: {} '.format(self.nombre,)
 
 
 class Articulos(models.Model):
