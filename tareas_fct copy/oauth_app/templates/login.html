@@ -1,0 +1,51 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Login - FCT Tasks</title>
+  <meta name="description" content="FCT Tasks">
+  <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="{% static '/fonts/fontawesome-all.min.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts/fontawesome5-overrides.min.css' %}">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../../static/img/avatars/osocadiz.jpg" id="icon" alt="User Icon" />
+      </div>
+
+      <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"
+        style="font-size: 17.8px;padding: 11px 16px;" href="{% provider_login_url 'google' %}"><i
+          class="fab fa-google"></i>&nbsp;
+        Login con Google</a>
+      <hr>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+
+    </div>
+  </div>
+  <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static '/js/script.min.js' %}"></script>
+</body>
+
+</html>

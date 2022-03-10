@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FCT - Tareas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <!-- Bootstrap JS -->
+  <script defer src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+
+        <div class="login-form bg-light mt-4 p-4">
+
+          {% if tarea == None %}
+          <p>Error al insertar la tarea</p>
+          {% else %}
+          <h1>Tarea</h1>
+          <p>{{ tarea.descripcion }}</p>
+          <p>{{ tarea.fecha }}</p>
+          <p>{{ tarea.horas }}</p>
+          {% endif %}
+
+          <div class="col-12 d-flex justify-content-end">
+            <a role="button" class="btn btn-primary" href="/listar_tareas/">Volver</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
